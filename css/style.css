@@ -1,0 +1,206 @@
+:root {
+  --color-grey: #9495a5;
+  --color-primary: #fff;
+  --color-dark: #494c6b;
+  --color-secondary: #fff;
+  --color-border: rgba(227, 228, 241, 0.4);
+  --color-very-dark: #161722;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  background-color: var(--color-primary);
+}
+
+body.dark {
+  background-color: var(--color-very-dark);
+}
+
+.container {
+  max-width: 54rem;
+  margin: 0rem auto;
+}
+
+.header {
+  background-color: #5e60ce;
+  height: 50vh;
+  width: 100%;
+  background-size: cover;
+}
+
+.header__heading {
+  color: #fff;
+  padding: 7rem 0;
+}
+
+.form__input {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 2rem 2.4rem;
+  width: 100%;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  letter-spacing: -0.25px;
+  color: var(--color-grey);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.form__input.dark {
+  background-color: #25273c;
+}
+
+.todo__list {
+  position: relative;
+  top: -50px;
+  min-height: 300px;
+  max-width: 540px;
+  margin: 0 auto;
+  background-color: var(--color-secondary);
+  border-radius: 5px;
+  box-shadow: 0 35px 50px rgba(194, 195, 214, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.todo__list.dark {
+  color: #fff;
+  background-color: #25273c;
+  box-shadow: 0 35px 50px rgba(0, 0, 0, 0.5);
+}
+
+.todo__list-item {
+  border: none;
+  outline: none;
+  padding: 2rem 2.4rem;
+  width: 100%;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  letter-spacing: -0.25px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo__list-title {
+  margin-left: 2rem;
+  color: #777a92;
+}
+
+.todo__list-title.dark {
+  color: #fff;
+}
+
+.todo__list-title.active {
+  text-decoration: line-through;
+}
+
+.todo__list-title.none {
+  text-decoration: none;
+}
+
+.buttons {
+  justify-content: space-between;
+  padding: 0.9rem 2.4rem 2.8rem;
+  display: flex;
+}
+
+.buttons a {
+  letter-spacing: -0.194444px;
+  color: #9495a5;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  cursor: pointer;
+}
+
+.fa-times {
+  float: right;
+}
+
+.delete {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #494c6b;
+}
+
+.btn.active {
+  color: #3a7cfd;
+}
+
+.switch-btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  cursor: pointer;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  position: fixed;
+  right: 25px;
+  top: 30px;
+}
+
+.theme-switch-wrapper span {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.toggle-text {
+  position: relative;
+  top: -4px;
+  right: 5px;
+  color: var(--on-background);
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+input[type=radio]:checked:before {
+  background-color: red;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+input[type=radio] {
+  height: 24px;
+  width: 24px;
+}
+
+.delete {
+  margin-left: auto;
+}
+
+/*# sourceMappingURL=style.css.map */

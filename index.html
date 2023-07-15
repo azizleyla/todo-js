@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+  <script src="https://kit.fontawesome.com/b04fed802b.js"></script>
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<div class="theme-switch-wrapper">
+  <img src="images/icon-moon.svg" class="btn-switch">
+</div>
+<header class="header">
+  <div class="container">
+    <h1 class="header__heading">TODO</h1>
+    <form id="form">
+      <input type="text" class="form__input" id="todo" placeholder="Create a new todo">
+    </form>
+  </div>
+</header>
+<div class="todo__list">
+  <ul class="todo__list-menu" id="todo-list">
+    <!-- <li class="todo__list__item">
+                <input type="checkbox">
+                <span>Complte task</span>
+            </li>
+            <li class="todo__list__item">
+                <input type="checkbox">
+                <span>Complte task</span>
+            </li>
+            <li class="todo__list__item">
+                <input type="checkbox">
+                <span>Complte task</span>
+            </li>
+            <li class="todo__list__item">
+                <input type="checkbox">
+                <span>Complte task</span>
+            </li> -->
+  </ul>
+  <div class="buttons">
+    <a href="" id="count">0 items left</a>
+    <div class="buttons__middle" id="oo">
+      <a href="#" class="btn active" id="all">All</a>
+      <a href="#" class="btn" id="completed">Show Completed </a>
+    </div>
+    <div class="buttons__right">
+      <!-- <a href="" id="clear">Clear completed</a>
+    </div> -->
+      <button id="hide-btn">Hide Completed Todos</button>
+    </div>
+  </div>
+  </header>
+  <script src="script.js"></script>
+  </body>
+
+</html>
