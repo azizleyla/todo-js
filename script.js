@@ -20,7 +20,7 @@ const addTodo = (e) => {
     todoName: inputValue,
   };
   todos.push(todo);
-  setTodosToLS(todos);
+  setTodosToLS();
   updateUI();
   updateCount()
 };
@@ -74,7 +74,6 @@ const handleDeleteTodo = (event, id) => {
   setTodosToLS();
 };
 
-//get todos from Local Storage
 
 const filterAndShowTodos = (filterFn) => {
   const todosFromLs = getAllTodosFromLs();
@@ -85,21 +84,22 @@ const filterAndShowTodos = (filterFn) => {
 
 const hideCompletedTodos = () => {
   filterAndShowTodos(item => !item.checked)
+  allBtn.classList.remove('active');
+  showCompletedBtn.classList.remove('active')
 };
 
 
 const showCompletedTodos = () => {
-  const todosFromLs = getAllTodosFromLs();
   showCompletedBtn.classList.add("active");
   allBtn.classList.remove("active");
-
   filterAndShowTodos(item => item.checked)
 };
+
 const showAllTodos = () => {
-  todos = getAllTodosFromLs();
-  updateUI();
+  todos = getAllTodosFromLs()
   showCompletedBtn.classList.remove("active");
   allBtn.classList.add("active");
+  updateUI();
 };
 const updateCount = () => {
   const undone = todos.filter((item) => !item.checked).length;
@@ -121,7 +121,7 @@ showCompletedBtn.addEventListener("click", showCompletedTodos);
 
 //get initial Todos from LS
 window.addEventListener("DOMContentLoaded", function () {
-  todos = getAllTodosFromLs();
+  todos = getAllTodosFromLs()
   updateUI();
   updateCount();
 });
